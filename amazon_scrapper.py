@@ -30,17 +30,17 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login('<email-id>','<passwd>')
+    server.login('<email-id>','<passwd>')  # Enter email id and password
     subject = 'Price below $150'
     body = 'check link' + URL
 
     msg = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-        'from',
-        'to',
+        'from email',
+        'to email',
         msg
-    )
+    ) # Enter from email and to email
 
     server.quit()
 
